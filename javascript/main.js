@@ -138,4 +138,3 @@ console.log("y > 1 && y < 100", y > 1 && y < 100);
 x = "z"
 y = 3
 console.log("z=== ", z=== "" );
-
