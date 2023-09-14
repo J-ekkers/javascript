@@ -9,8 +9,13 @@ btnChange.addEventListener('click', function () {
 
 });
 
+
+//opdr 3
 let slfChange = document.querySelector('.changeSelf');
 slfChange.addEventListener('click', function () {
-    let fullName = document.querySelector('.fullname');
-    fullName.textContent = 'Jordy Ekker';
+    let userInput = prompt ("typ je naam");
+     fullName = document.querySelector('.fullname');
+    fullName.textContent = userInput
 });
+
+// opdr 4
