@@ -1,16 +1,16 @@
 console.log("main.js is running");
 
-
+//opdr 1
 let m = 120;
 let n = 4;
 let result = m * n;
-console.log("result m x n =" ,result );
+console.log("result m x n =", result);
 
 //opdr 2
 let brand = "tesla";
 let model = "s";
 result = brand + " " + model
-console.log("merk + model =" ,result);
+console.log("merk + model =", result);
 
 //opdr 3
 let totalStudents = 24
