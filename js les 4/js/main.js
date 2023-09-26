@@ -57,13 +57,13 @@ list2.shift()
 console.log("list 2 is", list2);
 
 //opdracht 10
-var items = document.querySelector('items');
+let items = document.querySelector('items');
 
 function addItemToList() {
-  var newItem = prompt("Noem een film");
+  let newItem = prompt("Noem een film");
   if (newItem != null) {
-    var ul = document.querySelector('ul');
-    var li = document.createElement('li');
+    let ul = document.querySelector('ul');
+    let li = document.createElement('li');
     ul.appendChild(li);
     li.innerHTML = newItem;
   }
