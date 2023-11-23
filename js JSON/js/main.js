@@ -146,7 +146,7 @@ for(let i = 0; i < obComment2.length; i++){
 }
 
 //opdr6
-const album = `
+const video = `
 [
     {
       "albumId": 1,
@@ -190,13 +190,18 @@ const album = `
       "url": "https://via.placeholder.com/600/56a8c2",
       "thumbnailUrl": "https://via.placeholder.com/150/56a8c2"
     }
-  ]
-`;
-
-const obAlbum = JSON.parse(album);
-console.log("album", obAlbum);
-
-
+  ]`
+ 
+  const objvideo = JSON.parse(video)
+  const ul = document.createElement('ul');
+ 
+for(let i = 0; i < objvideo.length; i++){
+    const li = document.createElement('li');
+    li.innerHTML = `<h3>${objvideo[i].title}</h3><img src="${objvideo[i].thumbnailUrl}" alt="${objvideo[i].title}">`;
+    ul.appendChild(li);
+}
+ 
+document.body.appendChild(ul);
 
 //opdr7
 const person4 = { 
