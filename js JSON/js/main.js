@@ -1,18 +1,16 @@
-console.log("main.js werkt!");
-
-
-//opdr1a
+//Opdracht 1a
 const person = `
 {
-    "firstname": "Judeska",
-    "email": "judeska@example.com"
+        "firstname": "Judeska",
+        "email": "judeska@example.com"
 }
-`;
-const obPerson = JSON.parse(person);
-
-console.log("Object person", obPerson);
-console.log("Email", obPerson.email);
-
+`
+const objPerson = JSON.parse(person);
+ 
+console.log("Object person", objPerson);
+console.log("Email", objPerson.email);
+ 
+//Opdracht 1b
 const person2 = `
 {
     "id": 1,
@@ -22,41 +20,38 @@ const person2 = `
     "birthDate": "1973-01-22",
     "phone": "(555) 555-1234",
     "website": "www.johndoe.com"
-}
-`;
-const obPerson2 = JSON.parse(person2);
-
-
-console.log("id", obPerson2.id);
-console.log("firstname", obPerson2.firstname);
-console.log("lastname", obPerson2.lastname);
-
-//oppdr2
-const tweet = `
-{
+  }
+  `
+  const objPerson2 = JSON.parse(person2);
+ 
+  console.log("id is", objPerson2.id);
+  console.log("firstname is", objPerson2.firstname);
+  console.log("Lastname is", objPerson2.lastname);
+ 
+  //Opdracht 2
+ 
+  const tweet = `
+  {
     "id": 1,
-  "slug": "lorem-ipsum",
-  "url": "https://jsonplaceholder.org/posts/lorem-ipsum",
-  "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "content": "Ante taciti nulla sit libero orci sed nam. Sagittis suspendisse gravida ornare iaculis cras nullam varius ac ullamcorper.",
-  "image": "https://dummyimage.com/800x430/FFFFFF/lorem-ipsum.png&text=jsonplaceholder.org",
-  "thumbnail": "https://dummyimage.com/200x200/FFFFFF/lorem-ipsum.png&text=jsonplaceholder.org",
-  "status": "published",
-  "category": "lorem",
-  "publishedAt": "04/02/2023 13:25:21",
-  "updatedAt": "14/03/2023 17:22:20",
-  "userId": 1
-}
-`;
-
-const obTweet = JSON.parse(tweet);
-
-
-console.log("title", obTweet.title);
-console.log("published at", obTweet.publishedAt);
-console.log("content", obTweet.content);
-
-//opdr3
+    "slug": "lorem-ipsum",
+    "url": "https://jsonplaceholder.org/posts/lorem-ipsum",
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "content": "Ante taciti nulla sit libero orci sed nam. Sagittis suspendisse gravida ornare iaculis cras nullam varius ac ullamcorper.",
+    "image": "https://dummyimage.com/800x430/FFFFFF/lorem-ipsum.png&text=jsonplaceholder.org",
+    "thumbnail": "https://dummyimage.com/200x200/FFFFFF/lorem-ipsum.png&text=jsonplaceholder.org",
+    "status": "published",
+    "category": "lorem",
+    "publishedAt": "04/02/2023 13:25:21",
+    "updatedAt": "14/03/2023 17:22:20",
+    "userId": 1
+  }`
+ 
+  const objtweet = JSON.parse(tweet);
+  console.log("Title is:", objtweet.title);
+  console.log("content is:", objtweet.content);
+  console.log("publischedAt is:", objtweet.publishedAt);
+ 
+//Opdracht 3
 const person3 = `
 {
     "id": 4,
@@ -89,63 +84,57 @@ const person3 = `
       "catchPhrase": "Your success is our priority",
       "bs": "Consulting"
     }
-}
-`;
-
-const obperson3 = JSON.parse(person3);
-
-
-console.log("email", obperson3.email);
-console.log("username", obperson3.login.username);
-console.log("city", obperson3.address.city);
-console.log("name", obperson3.company.name);
-
-//opdr4
-
-const comment = `
+  }
+`
+ 
+const objPerson3 = JSON.parse(person3);
+console.log("email is:", objPerson3.email);
+console.log("username is:", objPerson3.login.username);
+console.log("city is:", objPerson3.address.city);
+console.log("company name is:", objPerson3.company.name);
+ 
+//Opdracht 4
+const comment1 = `
 {
     "id": 11,
     "postId": 3,
     "userId": 2,
     "comment": "Cras convallis ipsum eget sapien hendrerit dignissim."
-}
-`;
-
-const obComment = JSON.parse(comment);
-console.log("comment", obComment);
-
-
-//opdr5
+  }
+`
+const objcomment1 = JSON.parse(comment1);
+console.log("Comment", objcomment1);
+ 
+//Opdracht 5
 const comment2 = `
-    [
-        {
-          "id": 1,
-          "postId": 1,
-          "userId": 1,
-          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        },
-        {
-          "id": 2,
-          "postId": 1,
-          "userId": 1,
-          "comment": "Nulla quis libero vel orci rutrum suscipit."
-        },
-        {
-          "id": 3,
-          "postId": 3,
-          "userId": 2,
-          "comment": "Cras ac elit sit amet mi placerat bibendum."
-        }
-      ]
-`;
-
-const obComment2 = JSON.parse(comment2);
-
-for(let i = 0; i < obComment2.length; i++){
-    console.log("Comment " + obComment2[i].id + ": " + obComment2[i].comment);
-}
-
-//opdr6
+[
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 1,
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": 2,
+      "postId": 1,
+      "userId": 1,
+      "comment": "Nulla quis libero vel orci rutrum suscipit."
+    },
+    {
+      "id": 3,
+      "postId": 3,
+      "userId": 2,
+      "comment": "Cras ac elit sit amet mi placerat bibendum."
+    }
+  ]`
+ 
+  const objcomment2 = JSON.parse(comment2);
+ 
+  for(let i = 0; i < objcomment2.length; i++){
+     console.log("Comment" + objcomment2[i].id + ": " + objcomment2[i].comment);
+  }
+ 
+//Opdracht 6
 const video = `
 [
     {
@@ -202,48 +191,48 @@ for(let i = 0; i < objvideo.length; i++){
 }
  
 document.body.appendChild(ul);
-
-//opdr7
-const person4 = { 
-    name: 'John', 
+ 
+//Opdracht 7
+const Person4 = {
+    name: 'John',
     age: 20,
     marks: {
         science: 70,
         math: 75
     }
 }
-  console.log(person4);
-   
-  const jsonperson = JSON.stringify(person4)
-
-   
-//opdr8  
-const person5 = [
-	{ 
-		name: 'Wolverine', 
-		age: 38,
-		marks: {
-			science: 20,
-			math: 15
-		}
-	},
-	{ 
-		name: 'Xavier', 
-		age: 64,
-		marks: {
-			science: 95,
-			math: 90
-		}
-	},
-	{ 
-		name: 'Magneto', 
-		age: 68,
-		marks: {
-			science: 90,
-			math: 85
-		}
-	}
+  console.log(Person4);
+ 
+  const jsonperson4 = JSON.stringify(Person4)
+ 
+//Opdracht 8
+const hero =
+[
+  {
+    name: 'Wolverine',
+    age: 38,
+    marks: {
+      science: 20,
+      math: 15
+    }
+  },
+  {
+    name: 'Xavier',
+    age: 64,
+    marks: {
+      science: 95,
+      math: 90
+    }
+  },
+  {
+    name: 'Magneto',
+    age: 68,
+    marks: {
+      science: 90,
+      math: 85
+    }
+  }
 ]
-  console.log(person5);
-   
-  const jsonperson5 = JSON.stringify(person5)
+console.log(hero);
+ 
+  const jsonhero = JSON.stringify(hero)
