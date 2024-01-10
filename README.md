@@ -1,16 +1,35 @@
-// Get references to the input field and the button
-const inputField = document.querySelector('.txt-input');
-const button = document.querySelector('.btn-check');
+console.log("--- Page 4 ---");
 
-// Add click event listener to the button
-button.addEventListener('click', function() {
-    if (inputField.value.trim() === '') {
-        // If the input field is empty, add a class 'red' to show a red border
-        inputField.classList.remove('green'); // Remove green class if present
-        inputField.classList.add('red');
-    } else {
-        // If the input field is not empty, add a class 'green' to show a green border
-        inputField.classList.remove('red'); // Remove red class if present
-        inputField.classList.add('green');
-    }
-});
+const productUrl = "../data/products.json";
+
+function generateProductCard(product) {
+    const card = `
+        <div class="card">
+            <div class="product-information">
+                <h2>${product.title}</h2>
+                <p>${product.description}</p>
+                <p class="product-price">â¬${product.price}-</p>
+            </div>
+            <div class="product-image">
+                <img src="../images/product.png" alt="product" srcset="" width="60" height="60">
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+// Fetch data from products.json
+fetch(productUrl)
+    .then(response => response.json())
+    .then(data => {
+        const cardContainer = document.querySelector('.container');
+
+        // Loop through each product and generate cards
+        data.forEach(product => {
+            const cardMarkup = generateProductCard(product);
+            cardContainer.innerHTML += cardMarkup;
+        });
+    })
+    .catch(error => {
+        console.log("Error fetching data:", error);
+    });
